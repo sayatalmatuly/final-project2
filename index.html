@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Эффективное распределение времени — веб-приложение для тайм-менеджмента">
+  <title>TimeManager — Эффективное распределение времени</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="main">
+    <section class="hero container">
+      <div class="hero__content">
+        <span class="hero__greeting" id="greeting">Добрый день!</span>
+        <h1 class="hero__title">Управляйте своим временем умно</h1>
+        <p class="hero__description">
+          Забудьте о хаосе и прокрастинации. Планируйте задачи, используйте проверенные методики и отслеживайте результаты в простом и строгом интерфейсе.
+        </p>
+        <div class="hero__actions">
+          <a href="todo.html" class="btn btn--primary btn--lg">
+            Начать планирование
+          </a>
+          <a href="pomodoro.html" class="btn btn--secondary btn--lg">
+            Pomodoro Таймер
+          </a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__datetime" id="currentTime">--:--:--</div>
+        <div class="hero__date" id="currentDate">Загрузка...</div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section__header fade-in" style="text-align: left;">
+        <h2 class="section__title">Принципы тайм-менеджмента</h2>
+      </div>
+
+      <div class="principles-grid">
+        <article class="principle-item fade-in">
+          <div class="principle-item__number">01</div>
+          <h3 class="principle-item__title">Техника Pomodoro</h3>
+          <p class="principle-item__text">25 минут работы + 5 минут отдыха. Помогает поддерживать концентрацию и избегать выгорания.</p>
+        </article>
+
+        <article class="principle-item fade-in">
+          <div class="principle-item__number">02</div>
+          <h3 class="principle-item__title">Матрица Эйзенхауэра</h3>
+          <p class="principle-item__text">Разделение задач по срочности и важности на четыре квадранта. Сначала делайте важное и срочное.</p>
+        </article>
+
+        <article class="principle-item fade-in">
+          <div class="principle-item__number">03</div>
+          <h3 class="principle-item__title">Правило 80/20</h3>
+          <p class="principle-item__text">20% усилий дают 80% результатов. Сфокусируйтесь на задачах с максимальной отдачей и делегируйте остальное.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section__header fade-in">
+        <h2 class="section__title">Персональные настройки</h2>
+        <p class="section__subtitle">Настройте приложение под себя — данные сохраняются локально</p>
+      </div>
+
+      <div class="settings-panel fade-in">
+        <div class="card">
+          <form id="settingsForm">
+            <div class="form-group">
+              <label class="form-label" for="userName">Ваше имя</label>
+              <input type="text" id="userName" class="form-input" placeholder="Как к вам обращаться?">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="dailyGoal">Дневная цель (часов)</label>
+                <input type="number" id="dailyGoal" class="form-input" min="1" max="24" value="8">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="preferredMethod">Предпочитаемый метод</label>
+                <select id="preferredMethod" class="form-select">
+                  <option value="pomodoro">Pomodoro</option>
+                  <option value="eisenhower">Матрица Эйзенхауэра</option>
+                  <option value="pareto">Правило 80/20</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">
+                <input type="checkbox" id="notifications" checked> 
+                Включить напоминания
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn--primary">
+              <i data-lucide="save"></i> Сохранить настройки
+            </button>
+
+            <div class="settings-preview" id="settingsPreview">
+              Настройте параметры и нажмите «Сохранить».
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

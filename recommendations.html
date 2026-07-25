@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Рекомендации по тайм-менеджменту — методики, книги, статьи">
+  <title>Рекомендации — TimeManager</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="main">
+    <section class="section container">
+      <div class="section__header fade-in">
+        <h1 class="section__title">Рекомендации</h1>
+        <p class="section__subtitle">Методики, книги и сервисы для эффективного управления временем</p>
+      </div>
+
+      <blockquote class="quote-block fade-in">
+        <button class="btn btn--ghost quote-block__refresh" id="refreshQuote" title="Следующая цитата">
+          <i data-lucide="refresh-cw"></i>
+        </button>
+        <p class="quote-block__text" id="quoteText">Загрузка цитаты...</p>
+        <cite class="quote-block__author" id="quoteAuthor"></cite>
+      </blockquote>
+
+      <div class="recommendation-section fade-in">
+        <h2 class="recommendation-section__title">
+          <i data-lucide="lightbulb"></i> Методики
+        </h2>
+        <div class="recommendations-grid">
+          <article class="card">
+            <div class="card__icon card__icon--purple">
+              <i data-lucide="timer"></i>
+            </div>
+            <h3 class="card__title">Pomodoro Technique</h3>
+            <p class="card__text">Интервальная работа по 25 минут с короткими перерывами. Идеально для борьбы с прокрастинацией.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon card__icon--cyan">
+              <i data-lucide="layout-grid"></i>
+            </div>
+            <h3 class="card__title">Матрица Эйзенхауэра</h3>
+            <p class="card__text">Приоритизация задач по двум осям: важность и срочность. Помогает фокусироваться на главном.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon card__icon--amber">
+              <i data-lucide="target"></i>
+            </div>
+            <h3 class="card__title">GTD (Getting Things Done)</h3>
+            <p class="card__text">Система Дэвида Аллена: сбор, обработка, организация, обзор и выполнение задач.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon card__icon--green">
+              <i data-lucide="sunrise"></i>
+            </div>
+            <h3 class="card__title">Eat the Frog</h3>
+            <p class="card__text">Выполняйте самую сложную задачу первой делом утром, когда энергия на пике.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="recommendation-section fade-in">
+        <h2 class="recommendation-section__title">
+          <i data-lucide="book-open"></i> Книги
+        </h2>
+        <div class="resource-list">
+          <a href="https://gettingthingsdone.com/" target="_blank" rel="noopener noreferrer" class="resource-item">
+            <div class="resource-item__icon"><i data-lucide="book"></i></div>
+            <div class="resource-item__info">
+              <h4>«Getting Things Done» — David Allen</h4>
+              <p>Классика продуктивности и системы GTD</p>
+            </div>
+          </a>
+          <a href="https://calnewport.com/deep-work/" target="_blank" rel="noopener noreferrer" class="resource-item">
+            <div class="resource-item__icon"><i data-lucide="book"></i></div>
+            <div class="resource-item__info">
+              <h4>«Deep Work» — Cal Newport</h4>
+              <p>О глубокой работе и концентрации в эпоху отвлечений</p>
+            </div>
+          </a>
+          <a href="https://www.franklincovey.com/the-7-habits/" target="_blank" rel="noopener noreferrer" class="resource-item">
+            <div class="resource-item__icon"><i data-lucide="book"></i></div>
+            <div class="resource-item__info">
+              <h4>«7 навыков высокоэффективных людей» — Stephen Covey</h4>
+              <p>Фундаментальные привычки для продуктивности</p>
+            </div>
+          </a>
+          <a href="https://jamesclear.com/atomic-habits" target="_blank" rel="noopener noreferrer" class="resource-item">
+            <div class="resource-item__icon"><i data-lucide="book"></i></div>
+            <div class="resource-item__info">
+              <h4>«Atomic Habits» — James Clear</h4>
+              <p>Формирование полезных привычек</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="recommendation-section fade-in">
+        <h2 class="recommendation-section__title">
+          <i data-lucide="newspaper"></i> Статьи и сервисы
+        </h2>
+        <div class="resource-list">
+          <a href="https://www.notion.com/" target="_blank" rel="noopener noreferrer" class="resource-item">
+            <div class="resource-item__icon"><i data-lucide="globe"></i></div>
+            <div class="resource-item__info">
+              <h4>Notion</h4>
+              <p>Инструмент для планирования и управления проектами</p>
+            </div>
+          </a>
+          <a href="https://www.forestapp.cc/" target="_blank" rel="noopener noreferrer" class="resource-item">
+            <div class="resource-item__icon"><i data-lucide="globe"></i></div>
+            <div class="resource-item__info">
+              <h4>Forest</h4>
+              <p>Мобильное приложение с Pomodoro-таймером</p>
+            </div>
+          </a>
+          <a href="https://hbr.org/topic/time-management" target="_blank" rel="noopener noreferrer" class="resource-item">
+            <div class="resource-item__icon"><i data-lucide="file-text"></i></div>
+            <div class="resource-item__info">
+              <h4>Harvard Business Review — Time Management</h4>
+              <p>Научные статьи о продуктивности</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

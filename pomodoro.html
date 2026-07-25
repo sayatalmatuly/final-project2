@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pomodoro таймер — техника управления временем">
+  <title>Pomodoro — TimeManager</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="main pomodoro-page pomodoro-page--work">
+    <section class="pomodoro-container container container--narrow">
+      <p class="pomodoro-mode" id="pomodoroMode">Работа</p>
+
+      <div class="pomodoro-timer">
+        <svg class="pomodoro-timer__svg" viewBox="0 0 280 280">
+          <defs>
+            <linearGradient id="timerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#4a6741"/>
+              <stop offset="100%" style="stop-color:#c4a35a"/>
+            </linearGradient>
+          </defs>
+          <circle class="pomodoro-timer__bg" cx="140" cy="140" r="130"/>
+          <circle class="pomodoro-timer__progress" id="timerProgress" cx="140" cy="140" r="130"/>
+        </svg>
+        <div class="pomodoro-timer__display">
+          <span class="pomodoro-timer__time" id="pomodoroTime">25:00</span>
+          <span class="pomodoro-timer__label" id="timerLabel">Сфокусируйтесь на задаче</span>
+        </div>
+      </div>
+
+      <div class="pomodoro-controls">
+        <button class="btn btn--primary btn--lg" id="pomodoroStart">
+          <i data-lucide="play"></i> Старт
+        </button>
+        <button class="btn btn--secondary btn--lg" id="pomodoroPause" disabled>
+          <i data-lucide="pause"></i> Пауза
+        </button>
+        <button class="btn btn--ghost btn--lg" id="pomodoroReset">
+          <i data-lucide="rotate-ccw"></i> Сброс
+        </button>
+      </div>
+
+      <div class="pomodoro-settings">
+        <div class="form-group">
+          <label class="form-label" for="workMinutes">Работа (мин)</label>
+          <input type="number" id="workMinutes" class="form-input" min="1" max="60" value="25">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="breakMinutes">Отдых (мин)</label>
+          <input type="number" id="breakMinutes" class="form-input" min="1" max="30" value="5">
+        </div>
+      </div>
+
+      <p class="pomodoro-sessions">
+        Завершено сессий: <span id="sessionsCount">0</span>
+      </p>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
